@@ -31,7 +31,7 @@ export const handler: APIGatewayProxyHandlerV2 = async (event, context) => {
     const commandOutput = await ddbDocClient.send(
       new DeleteCommand({
         TableName: process.env.TABLE_NAME,
-        Key:{id:movieId},
+        Key:{ id: movieId },
       })
     );
 
